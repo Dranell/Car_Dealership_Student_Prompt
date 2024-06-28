@@ -14,24 +14,32 @@ for data manipulation and analysis. In particular, it offers data structures and
 manipulating numerical tables and time series.
 
 1.) Installed Necessary Dependencies/Libraries:
-*screenshot
+![Screenshot (17)](https://github.com/Dranell/Car_Dealership_Student_Prompt/assets/173842921/0956f6ff-2449-43de-99af-e714f1701f89)
+
 
 
 2.) Established connection to mysql from pycharm
-*screenshot
+![Screenshot (20)](https://github.com/Dranell/Car_Dealership_Student_Prompt/assets/173842921/d10d44a6-2082-48d5-97c6-21271c0e3f3a)
+
 
 3.) Established connection from main.py to MySQL
-*screenshot
+
 
 4.) Created DB from main.py
-*screenshot
+![Screenshot (23)](https://github.com/Dranell/Car_Dealership_Student_Prompt/assets/173842921/5b740578-0423-4395-ac4c-aefd99e41a51)
+![Screenshot (24)](https://github.com/Dranell/Car_Dealership_Student_Prompt/assets/173842921/f2c433d5-61a7-46bc-80d7-1f21751a2cd1)
+
 
 
 5.) Created Data Tables in MySQL
-*screenshot
+![Screenshot (25)](https://github.com/Dranell/Car_Dealership_Student_Prompt/assets/173842921/71ed3e9e-5476-48d6-81ed-04c04e46d405)
+![Screenshot (26)](https://github.com/Dranell/Car_Dealership_Student_Prompt/assets/173842921/520f9ce3-5146-4a63-8e4e-9da75c1e10b8)
+
 
 6.)Populated Data Tables
-*screenshot
+![Screenshot (27)](https://github.com/Dranell/Car_Dealership_Student_Prompt/assets/173842921/0d0f9da4-1541-4109-bf12-06473cbcb2dd)
+![Screenshot (28)](https://github.com/Dranell/Car_Dealership_Student_Prompt/assets/173842921/985f3ccf-86d2-4535-8de9-2e490db0d6df)
+
 
 7.) Updated values in Directory and Sports Car tables. 
 To showcase: 
@@ -42,8 +50,9 @@ B. Update the last person in your directory table to have a salary of 67,500
 
 C. Update the second vehicle in the sports car table to have 444 miles
 
-*screenshot
+![Screenshot (32)](https://github.com/Dranell/Car_Dealership_Student_Prompt/assets/173842921/b7917953-8e93-49de-ba45-dd2cef0f8cb1)
+
 
 
 8.) Removed the last vehicle from your sedan table.
-*screenshot
+![Screenshot (31)](https://github.com/Dranell/Car_Dealership_Student_Prompt/assets/173842921/5eddec9a-46df-477a-90b7-b2a362e88b3e)
