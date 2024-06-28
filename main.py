@@ -12,6 +12,8 @@ import populate_data_tables_queries as pdtq
 
 import read_data_table_queries as rdtq
 
+import update_data_tables_queries as udtq
+
 #Create a function to authenticate your connection to MySQL
 def createServerConnection(host_name,user_name,user_password,db_name):
     connection = None
@@ -62,7 +64,9 @@ def read_query(connection,query):
 #call function to establish connection from main.py to MySQL. Host name will always be localhost. User name is always "root".
 #make sure you set the calling of this function equal to 'connection'
 connection = createServerConnection("localhost","root","student", "car_dealership")
-
+execute_query(connection,udtq.update_directory_table_q1)
+execute_query(connection,udtq.update_directory_table_q2)
+execute_query(connection,udtq.update_sports_cars_table_q1)
 def displayAllDataTables():
     print("Information for Directory Data Table:")
     directoryDataTable = read_query(connection, rdtq.display_directory_table_information)
@@ -82,3 +86,4 @@ def displayAllDataTables():
         print(sedanCarInformation)
     print()
 displayAllDataTables()
+
