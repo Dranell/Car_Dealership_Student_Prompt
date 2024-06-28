@@ -5,14 +5,18 @@ from mysql.connector import Error
 #import your create_data_base.py
 import create_data_base as cdb
 
+#import your create data table queries
+import create_data_table_queries as cdtq
+
 #Create a function to authenticate your connection to MySQL
-def createServerConnection(host_name,user_name,user_password):
+def createServerConnection(host_name,user_name,user_password,db_name):
     connection = None
     try:
         connection = mysql.connector.connect(
             host = host_name,
             user = user_name,
-            passwd = user_password
+            passwd = user_password,
+            database = db_name
         )
         print("MySQL Database Connection Successful!")
     except Error as err:
@@ -30,8 +34,20 @@ def create_database(connection,query):
     except Error as err:
         print(f"Error: {err}")
 
+#creating a workhorse fuction to execute queries in MySQL
+def execute_query(connection,query):
+    cursor = connection.cursor()
+    try:
+        cursor.execute(query)
+        connection.commit()
+        print("Query successful!")
+    except Error as err:
+        print(f"Error: {err}")
+
+
+
 #call function to establish connection from main.py to MySQL. Host name will always be localhost. User name is always "root".
 #make sure you set the calling of this function equal to 'connection'
-connection = createServerConnection("localhost","root","student")
-#call function to create Database (this will only be called once. After that we delete it.)
-create_database(connection,cdb.create_data_base )
+connection = createServerConnection("localhost","root","student", "car_dealership")
+
+execute_query(connection,cdtq.sedan_cars)
