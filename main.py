@@ -8,6 +8,9 @@ import create_data_base as cdb
 #import your create data table queries
 import create_data_table_queries as cdtq
 
+import populate_data_tables_queries as pdtq
+
+
 #Create a function to authenticate your connection to MySQL
 def createServerConnection(host_name,user_name,user_password,db_name):
     connection = None
@@ -49,5 +52,6 @@ def execute_query(connection,query):
 #call function to establish connection from main.py to MySQL. Host name will always be localhost. User name is always "root".
 #make sure you set the calling of this function equal to 'connection'
 connection = createServerConnection("localhost","root","student", "car_dealership")
-
-execute_query(connection,cdtq.sedan_cars)
+execute_query(connection,pdtq.populate_directory_table)
+execute_query(connection,pdtq.populate_sports_cars)
+execute_query(connection,pdtq.populate_sedan_cars)

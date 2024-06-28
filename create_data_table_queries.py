@@ -10,7 +10,7 @@ employee_years_experience int not null
 """
 sports_cars = """
 create table sports_cars(
-vin_number int primary key unique,
+vin_number char(100) primary key unique,
 year int not null,
 make varchar(100) not null,
 model varchar(100) not null,
@@ -23,7 +23,7 @@ sold boolean
 
 sedan_cars = """
 create table sedan_cars(
-vin_number int primary key unique,
+vin_number char(100) primary key unique,
 year int not null,
 make varchar(100) not null,
 model varchar(100) not null,
