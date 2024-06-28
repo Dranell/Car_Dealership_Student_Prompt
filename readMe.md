@@ -23,6 +23,7 @@ manipulating numerical tables and time series.
 
 
 3.) Established connection from main.py to MySQL
+![Screenshot (20)](https://github.com/Dranell/Car_Dealership_Student_Prompt/assets/173842921/4c8ff601-5dee-424c-acc4-3153011167fe)
 
 
 4.) Created DB from main.py
