@@ -19,7 +19,8 @@ manipulating numerical tables and time series.
 
 
 2.) Established connection to mysql from pycharm
-![Screenshot (20)](https://github.com/Dranell/Car_Dealership_Student_Prompt/assets/173842921/d10d44a6-2082-48d5-97c6-21271c0e3f3a)
+![Screenshot (19)](https://github.com/Dranell/Car_Dealership_Student_Prompt/assets/173842921/5499d1d2-a594-4c80-872d-cf80a1c10b0a)
+
 
 
 3.) Established connection from main.py to MySQL
