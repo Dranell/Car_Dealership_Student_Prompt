@@ -10,6 +10,7 @@ import create_data_table_queries as cdtq
 
 import populate_data_tables_queries as pdtq
 
+import read_data_table_queries as rdtq
 
 #Create a function to authenticate your connection to MySQL
 def createServerConnection(host_name,user_name,user_password,db_name):
@@ -47,11 +48,37 @@ def execute_query(connection,query):
     except Error as err:
         print(f"Error: {err}")
 
+def read_query(connection,query):
+    cursor = connection.cursor()
+    result = None
+    try:
+        cursor.execute(query)
+        result = cursor.fetchall()
+        return result
+    except Error as err:
+        print(f"Error: '{err}'")
 
 
 #call function to establish connection from main.py to MySQL. Host name will always be localhost. User name is always "root".
 #make sure you set the calling of this function equal to 'connection'
 connection = createServerConnection("localhost","root","student", "car_dealership")
-execute_query(connection,pdtq.populate_directory_table)
-execute_query(connection,pdtq.populate_sports_cars)
-execute_query(connection,pdtq.populate_sedan_cars)
+
+def displayAllDataTables():
+    print("Information for Directory Data Table:")
+    directoryDataTable = read_query(connection, rdtq.display_directory_table_information)
+    for directoryInformation in directoryDataTable:
+        print(directoryInformation)
+    print()
+
+    print("Information for Sports Car Data Table:")
+    sportsCarDataTable = read_query(connection, rdtq.display_sports_car_table_information)
+    for sportsCarInformation in sportsCarDataTable:
+        print(sportsCarInformation)
+    print()
+
+    print("Information for Sedan Car Data Table")
+    sedanCarDataTable = read_query(connection, rdtq.display_sedan_car_table_information)
+    for sedanCarInformation in sedanCarDataTable:
+        print(sedanCarInformation)
+    print()
+displayAllDataTables()
